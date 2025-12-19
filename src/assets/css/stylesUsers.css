@@ -1,0 +1,220 @@
+/* General - MEJORAS AÑADIDAS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 640;
+}
+
+:root {
+    --primario: #f7aaaa;
+}
+
+.usersContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; /* Evita scroll horizontal en el contenedor principal */
+}
+
+.fondo {
+    background-image: url(../img/fondoUno.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.card {
+    width: calc(50% - 10px);
+    min-width: 300px;
+    margin-bottom: 20px;
+}
+
+.cardTittle {
+    display: flex;
+    gap: 25px;
+    border-bottom: solid;
+    margin-bottom: 2vh;
+    justify-content: space-between;
+}
+
+.input-group {
+    max-width: 60%;
+    max-height: 50px;
+}
+
+/* Estilos adicionales para la tabla de usuarios */
+.table-responsive {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto; /* Scroll horizontal solo dentro de la tabla */
+    margin: 0 auto;
+}
+
+/* Asegurar que la tabla ocupe el ancho completo */
+.table {
+    width: 100%;
+    min-width: 800px; /* Ancho mínimo para la tabla de órdenes */
+    margin-bottom: 0;
+}
+
+.table th {
+    border-bottom: 2px solid #dee2e6;
+    font-weight: 600;
+    white-space: nowrap; /* Evita que el texto se rompa en los headers */
+}
+
+.table td {
+    vertical-align: middle;
+    white-space: nowrap; /* Mantiene el texto en una línea */
+}
+
+/* Badges personalizados */
+.badge.bg-danger {
+    background-color: #dc3545 !important;
+}
+
+.badge.bg-primary {
+    background-color: #0d6efd !important;
+}
+
+/* Botones de acción */
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+/* Efectos hover en filas */
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+.row-table{
+    text-align: center;
+}
+
+/* ***************************SALES************************/
+.newSalesContainer {
+    width: 65vh;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+    margin: 7rem auto;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+    background-color: #ffffffc7;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+}
+
+.newSalesForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.newSalesForm label {
+    font-size: var(--text);
+    color: #444;
+    font-weight: 500;
+}
+
+.newSalesForm input[type="text"],
+.newSalesForm textarea,
+.newSalesForm input[type="date"] {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: var(--simpleTesxt);
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.newSalesForm textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Estilos específicos para pantallas pequeñas */
+@media (max-width: 800px){
+    .usersContainer {
+        padding: 10px;
+    }
+    
+    .input-group {
+        max-width: 90%;
+    }
+    
+    .table-responsive {
+        border-radius: 4px;
+    }
+    
+    .btn-editar{
+        min-width: 70px;
+        font-size: 0.75rem;
+        padding: 0.2rem 0.4rem;
+    }
+
+    .btn-eliminar{
+        display: flex;
+        flex-direction: row;
+        max-width: 110px;
+        max-height: 40px;
+        margin-top: 7px;
+        font-size: 0.75rem;
+        padding: 0.2rem 0.4rem;
+    }
+
+    .icon-eliminar{
+        max-width: 30px;
+    }
+
+    .hvr-icon-pulse{
+        display: flex;
+    }
+    
+    /* Ajustes específicos para la tabla de órdenes en móviles */
+    .table {
+        min-width: 1000px; /* Más ancho mínimo para acomodar todas las columnas */
+    }
+    
+    /* Reducir padding en celdas para móviles */
+    .table td, .table th {
+        padding: 0.3rem 0.5rem;
+    }
+}
+
+/* Para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .usersContainer h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .table {
+        min-width: 1100px; /* Aún más ancho para pantallas muy pequeñas */
+    }
+    
+    .btn-editar, .btn-eliminar {
+        min-width: 60px;
+        font-size: 0.7rem;
+    }
+}

@@ -1,0 +1,985 @@
+/* General - MEJORAS AÑADIDAS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 640;
+}
+
+:root {
+    --primario: #f7aaaa;
+}
+
+/* Asegurar que el body ocupe todo el ancho */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    /* Evitar scroll horizontal */
+}
+
+.navbar {
+    width: 100%;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 0.25rem 0.5rem;
+    margin-left: auto;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* Contenedor principal del navbar */
+.navbar>.container-fluid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+}
+
+/* Logo y título en línea en desktop */
+.navbar .logo,
+.navbar .globoTittle {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Menú colapsable - CORREGIDO */
+.navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 0;
+    /* Importante para que no ocupe espacio extra */
+}
+
+.navbar-nav {
+    width: 100%;
+    text-align: center;
+}
+
+.navbar-nav .nav-item {
+    display: block;
+    width: 100%;
+}
+
+.navbar-nav .btn-link {
+    text-align: center;
+    display: block;
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 0.5rem 1rem;
+    color: #000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .btn-link:hover {
+  animation: tada 1s ease; 
+  
+}
+
+
+/* Para desktop */
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+        width: auto;
+    }
+
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: row;
+        width: auto;
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-item {
+        width: auto;
+    }
+
+    .navbar-expand-lg .navbar-nav .btn-link {
+        width: auto;
+        text-align: center;
+    }
+
+    /* Logo y título en línea */
+    .navbar .logo {
+        max-width: 50px;
+    }
+
+    .navbar .globoTittle {
+        width: 250px;
+        max-width: 100%;
+    }
+}
+
+/* Para móvil */
+@media (max-width: 991.98px) {
+    .navbar .logo {
+        max-width: 40px;
+    }
+
+    .navbar .globoTittle {
+        width: 200px;
+        max-width: 100%;
+    }
+
+    /* POSICIONAMIENTO ABSOLUTO DEL MENÚ */
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        right: 1rem;
+        background-color: #f8f9fa;
+        border-radius: 0.375rem;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        z-index: 1000;
+        min-width: auto;
+        width: auto !important;
+        padding: 0.5rem;
+        margin-top: 0.5rem;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-nav {
+        width: auto !important;
+        min-width: max-content;
+        text-align: right;
+        background-color: transparent;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    .navbar-nav .nav-item {
+        display: block;
+        width: 100%;
+        white-space: nowrap;
+        /* Evita que el texto se divida en varias líneas */
+    }
+
+    /* BOTONES CON ANCHO MÍNIMO */
+    .navbar-nav .btn-link {
+        text-align: right;
+        display: block;
+        width: 100%;
+        border: none;
+        background: transparent;
+        padding: 0.5rem 1rem;
+        color: #000;
+        text-decoration: none;
+        min-width: max-content;
+        /* Ancho según el contenido */
+        transition: all 0.3s ease;
+    }
+
+    .navbar-nav .btn-link:hover {
+        background-color: var(--primario);
+        color: #000;
+        animation: headShake 1s ease;
+    }
+
+    /* ALINEACIÓN DE TODOS LOS ELEMENTOS A LA DERECHA */
+    #navbarNav .navbar-nav .nav-link {
+        text-align: right !important;
+        display: block;
+        width: 100%;
+        padding: 0.5rem 1rem;
+        min-width: max-content;
+    }
+
+    #navbarNav .navbar-nav .btn-link {
+        text-align: right !important;
+        border: none;
+        background: transparent;
+        color: #000;
+        text-decoration: none;
+    }
+
+    #navbarNav .navbar-nav .text-dark {
+        text-align: right !important;
+        display: block;
+        min-width: max-content;
+    }
+}
+
+.logo {
+    max-width: 50px;
+}
+
+.globoTittle {
+    height: auto;
+    width: 250px;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+/* CONTENEDOR PRINCIPAL - CORREGIDO */
+.contenedorUno {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../src/assets/img/fondoUno.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 5rem 10rem;
+    width: 100vw;
+    max-width: 100%;
+    /* Asegurar que no se desborde */
+    overflow: hidden;
+    /* Prevenir desbordamiento */
+    position: relative;
+}
+
+.contenedorUno .contenido-interno {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    /* Mismo ancho máximo que otras secciones */
+    margin: 0 auto;
+    /* Centrar horizontalmente */
+}
+
+.imglogo {
+    margin: auto;
+    width: 45%;
+    height: 60%;
+    max-width: 400px;
+    /* Limitar ancho máximo */
+}
+
+.parrafoPrimero {
+    backdrop-filter: blur(4px);
+    background-color: #eeeeee4d;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0 3rem;
+    /* Quitamos el margen vertical excesivo */
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 20px 10px rgba(0, 0, 0, 0.405);
+    transition: all 0.5s ease;
+    overflow: hidden;
+    transition: transform 0.4s ease, transform 0.4s ease-in-out;
+    width: 50%;
+    /* Limitar ancho del párrafo */
+    max-width: 500px;
+    /* Ancho máximo */
+}
+
+.parrafoSegundo {
+    backdrop-filter: blur(4px);
+    background-color: #eeeeee4d;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0 3rem;
+    /* Quitamos el margen vertical excesivo */
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 20px 10px rgba(0, 0, 0, 0.405);
+    transition: all 0.5s ease;
+    overflow: hidden;
+    transition: transform 0.4s ease, transform 0.4s ease-in-out;
+    width: 80%;
+    /* Limitar ancho del párrafo */
+    max-width: 500px;
+    /* Ancho máximo */
+}
+
+.parrafoPrimero:hover {
+    box-shadow: 0px 20px 10px rgba(0, 0, 0, 0.1);
+    transition: all 1s ease;
+    transform: scale(1.1);
+}
+
+.tittleIndex {
+    text-align: center;
+    width: 100%;
+}
+
+
+/*************************** GALERIA CARRUSEL (PARALLAX REAL) ******************/
+
+.galeria {
+    position: relative;
+    width: 100%;
+    padding: 4rem 0;
+    overflow: hidden; /* evita problemas con el fondo fijo */
+}
+
+/* Fondo parallax REAL, compatible en móvil */
+.galeria::before {
+    content: "";
+    position: fixed; /* CLAVE DEL EFECTO */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url(../src/assets/img/halloween/halloweenTwo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: -2;
+}
+
+/********************* CONTENIDO INTERNO *********************/
+
+.tituloImagen {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60%;
+    z-index: 1;
+    position: relative;
+}
+
+/* Carrusel  */
+.carousel-item img {
+    width: 40%;
+    height: 100%;
+    object-fit: contain;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(255, 100, 100, 0.6);
+    border-radius: 50%;
+    background-size: 50% 50%;
+    padding: 25px;
+    z-index: 1;
+}
+
+/* Botón */
+.divCuadro {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+}
+
+.cuadroGallery {
+    background-color: rgba(255, 255, 255, 0.911);
+    padding: 1rem 2rem;
+    border: 3px solid black;
+    margin-bottom: 2rem;
+    margin-top: 20px;
+    transition: all 0.5s ease;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/********************* RESPONSIVE *********************/
+
+@media (max-width: 768px) {
+    .tituloImagen {
+        max-width: 80%;
+    }
+    .carousel-item img {
+        width: 70%;
+    }
+}
+
+@media (max-width: 576px) {
+    .tituloImagen {
+        max-width: 90%;
+    }
+    .carousel-item img {
+        width: 85%;
+    }
+}
+
+
+/*****************************  SERVICIOS   ********************************/
+
+/* Fondo Parallax REAL compatible con móvil */
+.contenedorServicios {
+    position: relative;
+    width: 100%;
+    padding: 2rem 7rem;
+    overflow: hidden; /* importante */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Este pseudo-elemento hace la magia */
+.contenedorServicios::before {
+    content: "";
+    position: fixed;             /* FONDO REALMENTE QUIETO */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../src/assets/img/fondoUno.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: -2;  /* MÁS ATRÁS QUE TODO */
+}
+
+
+
+.services {
+    padding: 2rem;
+    width: 100%;
+}
+
+.servicesWrapper {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: auto;
+}
+
+.service {
+    backdrop-filter: blur(4px);
+    flex: 1 1 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 25px;
+    box-shadow: 0px 20px 10px rgba(0, 0, 0, 0.405);
+    transition: all 0.5s ease;
+    padding: .5rem;
+    overflow: hidden;
+}
+
+.service:hover {
+    transform: scale(1.1);
+    transition: 0.4s;
+}
+
+.service img {
+    margin-top: 5vh;
+    width: 70%;
+    object-fit: cover;
+}
+
+.service h4 {
+    font-size: 1.5rem;
+}
+
+.service p {
+    text-align: center;
+    margin: 0 4vh 10vh;
+}
+
+
+/************  MÓVIL  ************/
+@media (max-width: 576px) {
+    .contenedorServicios {
+        padding: 1rem;
+    }
+
+    .servicesWrapper {
+        width: 100%;
+    }
+}
+
+
+/********************************* ABOUT ***********************************************/
+
+/* Contenedor principal */
+.section2 {
+    position: relative;
+    width: 100%;
+    padding: 8rem 20rem;
+    overflow: hidden; /* Evita desbordes */
+}
+
+/* Fondo fijo REAL (funciona en móvil y escritorio) */
+.section2::before {
+    content: "";
+    position: fixed;        /* LA CLAVE DEL PARALLAX REAL */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url(../src/assets/img/atres.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: -2; /* Va detrás del contenido */
+}
+
+/* Capa de oscurecimiento suave opcional */
+.section2::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2); 
+    z-index: -1;
+}
+
+/*********** Contenido interno ************/
+.parrafoSegundo {
+    position: relative;
+    z-index: 1; /* Garantiza que quede por encima del fondo */
+    color: white;
+}
+
+/*********** RESPONSIVE ************/
+@media (max-width: 768px) {
+    .section2 {
+        padding: 4rem 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .section2 {
+        padding: 3rem 1rem;
+    }
+}
+  
+
+/************************************** Footer *********************************/
+.footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ddd;
+}
+
+.contacto {
+    margin-top: 30px;
+    margin-left: 5%;
+}
+
+.footerUno {
+    margin-left: 5%;
+}
+
+.footerDos {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20vh;
+    margin-top: 20px;
+    margin-left: 4%;
+}
+
+.dateFooter {
+    font-size: .8rem;
+    margin-left: 40px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.imgContact {
+    height: 8vh;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+
+/* Botón Subir */
+.botonSubir {
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.botonSubir:hover {
+    background-color: transparent;
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.flechaA {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* MEDIA QUERIES - MEJORADAS */
+@media (max-width: 1200px) {
+
+    .contenedorUno,
+    .contenedorServicios {
+        padding: 3rem 5rem;
+    }
+
+    .section2 {
+        padding: 6rem 10rem;
+    }
+
+    .grid {
+        padding: 4rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-nav {
+        text-align: right !important;
+    }
+
+    #navbarNav .navbar-nav {
+        margin-left: auto;
+    }
+
+    #navbarNav .navbar-nav .nav-item {
+        display: block;
+        text-align: right;
+    }
+
+    .navLogin {
+        text-align: right !important;
+        display: block !important;
+        width: 100% !important;
+    }
+
+    .contenedorUno,
+    .contenedorServicios {
+        padding: 2rem 3rem;
+    }
+
+    .section2 {
+        padding: 4rem 6rem;
+    }
+
+    .grid {
+        padding: 2rem;
+    }
+
+    .footerDos {
+        gap: 4vh;
+    }
+}
+
+@media (max-width: 800px) {
+    .contenedorUno {
+        flex-direction: column;
+        padding: 1rem 2rem;
+    }
+
+    .contenedorUno .contenido-interno {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .globoTittle {
+        max-width: 150px;
+    }
+
+    .imglogo {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .logo {
+        max-width: 30px;
+    }
+
+    .carousel-item img {
+        width: 80%;
+        /* Aumentado para móvil */
+    }
+
+    .parrafoPrimero {
+        width: 70%;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .contenedorServicios {
+        padding: 1rem 2rem;
+        /* Reducido para móvil */
+    }
+
+    .tituloImagen {
+        max-width: 100%;
+    }
+
+    .divCuadro a {
+        max-width: 100%;
+    }
+
+    .section2 {
+        padding: 2rem 3rem;
+        /* Reducido para móvil */
+    }
+
+    /* GRID PARA MÓVIL - 1 COLUMNA */
+    .grid {
+        grid-template-columns: 1fr;
+        /* Cambiado a 1 columna */
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .servicesWrapper {
+        width: 80%;
+        /* Más ancho en móvil */
+    }
+
+    .navCategory {
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* Botones en columna */
+        align-items: center;
+        gap: 2vh;
+    }
+
+    .contacto,
+    .footerUno {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedorUno {
+        background-attachment: scroll; /* En móvil usa scroll en lugar de fixed */
+        background-position: center center;
+        height: auto;
+        min-height: 100vh;
+        padding: 5rem 2rem;
+    }
+
+    .parrafoSegundo{
+        margin: 0 8.5rem;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .contenedorUno,
+    .contenedorServicios {
+        padding: 1rem;
+        /* Mínimo padding */
+    }
+
+    .contenedorUno .contenido-interno {
+        gap: 1rem;
+    }
+
+    .imglogo {
+        width: 70%;
+        max-width: 250px;
+    }
+
+    .parrafoPrimero {
+        padding: 15px;
+        font-size: 0.9rem;
+        width: 60%;
+    }
+
+    .parrafoSegundo {
+        width: 60%;
+    }
+
+    .section2 {
+        padding: 1.5rem;
+    }
+
+    .grid {
+        padding: 1rem;
+    }
+
+    .servicesWrapper {
+        width: 80%;
+    }
+
+    .botonSubir {
+        width: 50px;
+        height: 50px;
+        right: 10%;
+    }
+}
+
+
+
+/************************************************GALERY*************************************/
+
+/* Contenedor principal (mantiene fondo) */
+.contenedorDos {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+.contenedorDos {
+  position: relative;
+  width: 100%;
+  padding: 50px 0;
+  overflow: hidden;
+}
+
+.contenedorDos-bg {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  z-index: -1;
+}
+
+
+
+/* Section: ahora position relative para superponer decoraciones */
+.sectionGallery {
+  position: relative;            /* importante para posicionar web-left/right */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 1100px;            /* evita que el carrusel se desplace a la izquierda en pantallas grandes */
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* DECORACIONES HALLOWEEN: absolutas y encima del carrusel */
+.web-left,
+.web-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 140px;                /* ajustar tamaño según diseño */
+  height: 140px;               /* ajustar según tu asset o diseño */
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;        /* no bloquean clicks */
+  z-index: 30;                 /* encima del carrusel */
+  opacity: 0.95;
+}
+
+/* ejemplo: si usas imágenes o svg como fondo para las decoraciones, asignalas aquí */
+/* Ajusta las rutas según tus assets */
+.web-left {
+  left: 10px;
+  background-image: url('../assets/img/halloween/ghost-left.png');
+}
+.web-right {
+  right: 10px;
+  background-image: url('../assets/img/halloween/ghost-right.png');
+}
+
+/* Carrusel: encima del contenido base, pero debajo de decoraciones */
+.customCarousel {
+  width: 70%;
+  max-width: 950px;
+  margin: 40px auto;
+  border-radius: 20px;
+  overflow: hidden !important;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 10;
+}
+
+/* Imagen del slide */
+.carouselImg {
+  height: 500px;
+  object-fit: cover;
+  display: block;
+  width: 100%;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 1199px) {
+  .sectionGallery { max-width: 1000px; }
+  .carouselImg { height: 420px; }
+  .web-left, .web-right { width: 110px; height: 110px; }
+}
+
+@media (max-width: 767px) {
+  .customCarousel { width: 80%; margin: 20px auto; }
+  .carouselImg { height: 260px; }
+  .web-left, .web-right { display: none; } /* ocultar decoraciones en móviles */
+}
+
+/* --- Mantengo tus estilos de botones y productos (sin cambios críticos) --- */
+.navCategory {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 4vh;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.btn-light {
+  border: 3px solid black;
+}
+
+.navCategory .btn-light.active {
+  background-color: var(--primario) !important;
+  border-color: #000000 !important;
+  color: #000000 !important;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navCategory .btn-light:hover {
+  background-color: var(--primario);
+  border-color: #000000;
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+/* Limpieza: evita padding gigante que empujaba layout en versiones anteriores */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 0;      /* antes tenías padding: 6rem; eso desplazaba elementos */
+  width: 100%;
+}
+
+.producto {
+  background-color: #eeeeee4d;
+  padding: .5rem;
+  transition: transform 0.4s ease;
+}
+.producto:hover { transform: scale(1.03); box-shadow: 0 0 15px rgba(0,0,0,0.4); }
+
+.productoHalloween:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.7);
+  border: 2px solid rgba(255, 0, 0, 0.377);
+  transition: 0.3s ease-in-out;
+}
+
+
