@@ -6,26 +6,26 @@ import Snowfall from "../assets/snowfall/Snowfall";
 import "../assets/snowfall/snowfall.css";
 
 // Importar las imágenes de fondo
-import fondoArcos from "../../public/img/fondo-bouquets.jpg";
-import fondoBouquets from "../../public/img/fondoUno.jpg";
-import fondoDisenos from "../../public/img/halloween/halloweenTwo.jpg";
-import fondoNavidad from "../../public/img/navidad.jpg";
+import fondoArcos from "/img/fondo-bouquets.jpg";
+import fondoBouquets from "/img/fondoUno.jpg";
+import fondoDisenos from "/img/halloween/halloweenTwo.jpg";
+import fondoNavidad from "/img/navidad.jpg";
 
 // Datos de las imágenes centralizado
 const categoriesData = {
   arcos: {
     background: fondoArcos,
     images: [
-      { src: "../../public/img/arcos/1.jpg", alt: "Arco decorativo 1" },
-      { src: "../../public/img/arcos/2.jpg", alt: "Arco decorativo 2" },
-      { src: "../../public/img/arcos/3.jpg", alt: "Arco decorativo 3" },
-      { src: "../../public/img/arcos/4.jpg", alt: "Arco decorativo 4" },
-      { src: "../../public/img/arcos/5.jpg", alt: "Arco decorativo 5" },
-      { src: "/../../public/img/arcos/.jpg", alt: "Arco decorativo 6" },
-      { src: "../../public/img/arcos/7.jpg", alt: "Arco decorativo 7" },
-      { src: "../../public/img/arcos/8.jpg", alt: "Arco decorativo 8" },
-      { src: "../../public/img/arcos/9.jpg", alt: "Arco decorativo 9" },
-      { src: "../../public/img/arcos/10.jpg", alt: "Arco decorativo 10" },
+      { src: "/img/arcos/1.jpg", alt: "Arco decorativo 1" },
+      { src: "/img/arcos/2.jpg", alt: "Arco decorativo 2" },
+      { src: "/img/arcos/3.jpg", alt: "Arco decorativo 3" },
+      { src: "/img/arcos/4.jpg", alt: "Arco decorativo 4" },
+      { src: "/img/arcos/5.jpg", alt: "Arco decorativo 5" },
+      { src: "/img/arcos/6.jpg", alt: "Arco decorativo 6" },
+      { src: "/img/arcos/7.jpg", alt: "Arco decorativo 7" },
+      { src: "/img/arcos/8.jpg", alt: "Arco decorativo 8" },
+      { src: "/img/arcos/9.jpg", alt: "Arco decorativo 9" },
+      { src: "/img/arcos/10.jpg", alt: "Arco decorativo 10" },
     ],
     description: "Arcos decorativos elegantes para bodas, eventos y celebraciones especiales. Diseños personalizados con flores frescas y artificiales que crean un ambiente mágico."
   },
@@ -33,16 +33,16 @@ const categoriesData = {
   bouquets: {
     background: fondoBouquets,
     images: [
-      { src: "/src/assets/img/bouquets/1.jpg", alt: "Bouquet 1" },
-      { src: "/src/assets/img/bouquets/2.jpg", alt: "Bouquet 2" },
-      { src: "/src/assets/img/bouquets/3.jpg", alt: "Bouquet 3" },
-      { src: "/src/assets/img/bouquets/4.jpg", alt: "Bouquet 4" },
-      { src: "/src/assets/img/bouquets/5.jpg", alt: "Bouquet 5" },
-      { src: "/src/assets/img/bouquets/6.jpg", alt: "Bouquet 6" },
-      { src: "/src/assets/img/bouquets/7.jpg", alt: "Bouquet 7" },
-      { src: "/src/assets/img/bouquets/8.jpg", alt: "Bouquet 8" },
-      { src: "/src/assets/img/bouquets/9.jpg", alt: "Bouquet 9" },
-      { src: "/src/assets/img/bouquets/10.jpg", alt: "Bouquet 10" },
+      { src: "/img/bouquets/1.jpg", alt: "Bouquet 1" },
+      { src: "/img/bouquets/2.jpg", alt: "Bouquet 2" },
+      { src: "/img/bouquets/3.jpg", alt: "Bouquet 3" },
+      { src: "/img/bouquets/4.jpg", alt: "Bouquet 4" },
+      { src: "/img/bouquets/5.jpg", alt: "Bouquet 5" },
+      { src: "/img/bouquets/6.jpg", alt: "Bouquet 6" },
+      { src: "/img/bouquets/7.jpg", alt: "Bouquet 7" },
+      { src: "/img/bouquets/8.jpg", alt: "Bouquet 8" },
+      { src: "/img/bouquets/9.jpg", alt: "Bouquet 9" },
+      { src: "/img/bouquets/10.jpg", alt: "Bouquet 10" },
     ],
     description: "Ramos de flores exquisitos para novias, damas de honor y ocasiones especiales. Combinaciones únicas que expresan emociones y complementan cualquier estilo."
   },
@@ -50,17 +50,17 @@ const categoriesData = {
   diseños: {
     background: fondoDisenos,
     images: [
-      { src: "/src/assets/img/especializados/1.jpg", alt: "Diseño especial 1" },
-      { src: "/src/assets/img/especializados/2.jpg", alt: "Diseño especial 2" },
-      { src: "/src/assets/img/especializados/3.jpg", alt: "Diseño especial 3" },
-      { src: "/src/assets/img/especializados/4.jpg", alt: "Diseño especial 4" },
-      { src: "/src/assets/img/especializados/5.jpg", alt: "Diseño especial 5" },
-      { src: "/src/assets/img/especializados/6.jpg", alt: "Diseño especial 6" },
-      { src: "/src/assets/img/especializados/7.jpg", alt: "Diseño especial 7" },
-      { src: "/src/assets/img/especializados/8.jpg", alt: "Diseño especial 8" },
-      { src: "/src/assets/img/especializados/9.jpg", alt: "Diseño especial 9" },
+      { src: "/img/especializados/1.jpg", alt: "Diseño especial 1" },
+      { src: "/img/especializados/2.jpg", alt: "Diseño especial 2" },
+      { src: "/img/especializados/3.jpg", alt: "Diseño especial 3" },
+      { src: "/img/especializados/4.jpg", alt: "Diseño especial 4" },
+      { src: "/img/especializados/5.jpg", alt: "Diseño especial 5" },
+      { src: "/img/especializados/6.jpg", alt: "Diseño especial 6" },
+      { src: "/img/especializados/7.jpg", alt: "Diseño especial 7" },
+      { src: "/img/especializados/8.jpg", alt: "Diseño especial 8" },
+      { src: "/img/especializados/9.jpg", alt: "Diseño especial 9" },
       {
-        src: "/src/assets/img/especializados/10.jpg",
+        src: "/img/especializados/10.jpg",
         alt: "Diseño especial 10",
       },
     ],
@@ -71,15 +71,15 @@ const categoriesData = {
     background: fondoNavidad,
     images: [
       {
-        src: "/src/assets/img/especializados/10.jpg",
+        src: "/img/especializados/10.jpg",
         alt: "Decoración navideña 1",
       },
       {
-        src: "/src/assets/img/especializados/9.jpg",
+        src: "/img/especializados/9.jpg",
         alt: "Decoración navideña 2",
       },
       {
-        src: "/src/assets/img/especializados/8.jpg",
+        src: "/img/especializados/8.jpg",
         alt: "Decoración navideña 3",
       },
     ],
