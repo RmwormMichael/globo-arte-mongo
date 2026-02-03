@@ -26,6 +26,7 @@ const ClientProfile = () => {
 
   const loadUserProfile = () => {
     const currentUser = getCurrentUser();
+    console.log("USUARIO DESDE getCurrentUser:", currentUser);
     setUser(currentUser);
     setEditForm({
       nombre: currentUser.nombre,

@@ -19,7 +19,7 @@ export default function GalleryGrid({ images, category }) {
       <div
         id={`carousel-${category}`}
         className="carousel slide carousel-fade customCarousel"
-        data-bs-ride="carousel"
+        data-bs-ride="false"
       >
         <div className="carousel-inner">
           {images.map((image, index) => {

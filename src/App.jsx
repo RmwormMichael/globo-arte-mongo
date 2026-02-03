@@ -12,7 +12,6 @@ import ScrollToTop from "./components/ScrollToTop";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { getCurrentUser, isAuthenticated } from "./services/authService";
-import EmailConfirmed from "./pages/EmailConfirmed";
 import AdminUsers from "./components/AdminUsers";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { UserProvider } from "./context/UserProvider";
@@ -27,30 +26,24 @@ import 'hover.css';
 
 // Componente para la página principal con navegación por secciones
 function HomePage() {
-  const location = useLocation();
-  
-  // Determinar qué sección mostrar basado en el hash de la URL
-  const getActiveSection = () => {
-    const hash = location.hash;
-    
-    switch(hash) {
-      case '#services':
-        return <Services />;
-      case '#about':
-        return <About />;
-      case '#templates':
-        return <TemplatesGallery />;
-      case '#home':
-      case '':
-      default:
-        return <SeccionUno />;
-    }
-  };
 
   return (
-    <div>      
-      {/* Mostrar solo la sección activa */}
-      {getActiveSection()}
+    <div>
+      <section id="home">
+        <SeccionUno />
+      </section>
+
+      <section id="services">
+        <Services />
+      </section>
+
+      <section id="about">
+        <About />
+      </section>
+
+      <section id="templates">
+        <TemplatesGallery />
+      </section>
     </div>
   );
 }
@@ -161,7 +154,6 @@ function AppContent() {
             </ProtectedRoute>
           }
         />
-        <Route path="/confirmar-cuenta" element={<EmailConfirmed />} />
       </Routes>
 
       <Footer />

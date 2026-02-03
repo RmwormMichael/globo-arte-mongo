@@ -87,6 +87,10 @@ html, body {
   
 }
 
+.bg-body-tertiary{
+    background-color: rgb(248 249 250 / 23%) !important;
+}
+
 
 /* Para desktop */
 @media (min-width: 992px) {
@@ -209,221 +213,26 @@ html, body {
     }
 }
 
-.logo {
-    max-width: 50px;
-}
-
-.globoTittle {
-    height: auto;
-    width: 250px;
-    max-width: 100%;
-    vertical-align: middle;
-}
-
-/* CONTENEDOR PRINCIPAL - CORREGIDO */
-.contenedorUno {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 100vh;
-    background-image: url(../src/assets/img/fondoUno.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    padding: 5rem 10rem;
-    width: 100vw;
-    max-width: 100%;
-    /* Asegurar que no se desborde */
-    overflow: hidden;
-    /* Prevenir desbordamiento */
-    position: relative;
-}
-
-.contenedorUno .contenido-interno {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    /* Mismo ancho máximo que otras secciones */
-    margin: 0 auto;
-    /* Centrar horizontalmente */
-}
-
-.imglogo {
-    margin: auto;
-    width: 45%;
-    height: 60%;
-    max-width: 400px;
-    /* Limitar ancho máximo */
-}
-
-.parrafoPrimero {
-    backdrop-filter: blur(4px);
-    background-color: #eeeeee4d;
-    text-align: center;
-    font-size: 1rem;
-    line-height: 1.5;
-    margin: 0 3rem;
-    /* Quitamos el margen vertical excesivo */
-    border-radius: 5px;
-    padding: 20px;
-    box-shadow: 0px 20px 10px rgba(0, 0, 0, 0.405);
-    transition: all 0.5s ease;
-    overflow: hidden;
-    transition: transform 0.4s ease, transform 0.4s ease-in-out;
-    width: 50%;
-    /* Limitar ancho del párrafo */
-    max-width: 500px;
-    /* Ancho máximo */
-}
-
-.parrafoSegundo {
-    backdrop-filter: blur(4px);
-    background-color: #eeeeee4d;
-    text-align: center;
-    font-size: 1rem;
-    line-height: 1.5;
-    margin: 0 3rem;
-    /* Quitamos el margen vertical excesivo */
-    border-radius: 5px;
-    padding: 20px;
-    box-shadow: 0px 20px 10px rgba(0, 0, 0, 0.405);
-    transition: all 0.5s ease;
-    overflow: hidden;
-    transition: transform 0.4s ease, transform 0.4s ease-in-out;
-    width: 80%;
-    /* Limitar ancho del párrafo */
-    max-width: 500px;
-    /* Ancho máximo */
-}
-
-.parrafoPrimero:hover {
-    box-shadow: 0px 20px 10px rgba(0, 0, 0, 0.1);
-    transition: all 1s ease;
-    transform: scale(1.1);
-}
-
-.tittleIndex {
-    text-align: center;
-    width: 100%;
-}
 
 
-/*************************** GALERIA CARRUSEL (PARALLAX REAL) ******************/
-
-.galeria {
-    position: relative;
-    width: 100%;
-    padding: 4rem 0;
-    overflow: hidden; /* evita problemas con el fondo fijo */
-}
-
-/* Fondo parallax REAL, compatible en móvil */
-.galeria::before {
-    content: "";
-    position: fixed; /* CLAVE DEL EFECTO */
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-
-    background-image: url(../src/assets/img/halloween/halloweenTwo.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    z-index: -2;
-}
-
-/********************* CONTENIDO INTERNO *********************/
-
-.tituloImagen {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 60%;
-    z-index: 1;
-    position: relative;
-}
-
-/* Carrusel  */
-.carousel-item img {
-    width: 40%;
-    height: 100%;
-    object-fit: contain;
-    margin: auto;
-    position: relative;
-    z-index: 1;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: rgba(255, 100, 100, 0.6);
-    border-radius: 50%;
-    background-size: 50% 50%;
-    padding: 25px;
-    z-index: 1;
-}
-
-/* Botón */
-.divCuadro {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    z-index: 1;
-    position: relative;
-}
-
-.cuadroGallery {
-    background-color: rgba(255, 255, 255, 0.911);
-    padding: 1rem 2rem;
-    border: 3px solid black;
-    margin-bottom: 2rem;
-    margin-top: 20px;
-    transition: all 0.5s ease;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-/********************* RESPONSIVE *********************/
-
-@media (max-width: 768px) {
-    .tituloImagen {
-        max-width: 80%;
-    }
-    .carousel-item img {
-        width: 70%;
-    }
-}
-
-@media (max-width: 576px) {
-    .tituloImagen {
-        max-width: 90%;
-    }
-    .carousel-item img {
-        width: 85%;
-    }
-}
-
-
-/*****************************  SERVICIOS   ********************************/
+/*****************************  SERVICIOS - DISEÑO PROFESIONAL ********************************/
 
 /* Fondo Parallax REAL compatible con móvil */
 .contenedorServicios {
     position: relative;
     width: 100%;
-    padding: 2rem 7rem;
-    overflow: hidden; /* importante */
+    padding: 6rem 2rem;
+    overflow: hidden;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-/* Este pseudo-elemento hace la magia */
+/* Fondo parallax con overlay elegante */
 .contenedorServicios::before {
     content: "";
-    position: fixed;             /* FONDO REALMENTE QUIETO */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -432,141 +241,594 @@ html, body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
-    z-index: -2;  /* MÁS ATRÁS QUE TODO */
+    background-attachment: fixed;
+    z-index: -2;
+    filter: brightness(0.9) contrast(1.1);
 }
 
-
-
-.services {
-    padding: 2rem;
-    width: 100%;
-}
-
-.servicesWrapper {
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin: auto;
-}
-
-.service {
-    backdrop-filter: blur(4px);
-    flex: 1 1 15rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    border-radius: 25px;
-    box-shadow: 0px 20px 10px rgba(0, 0, 0, 0.405);
-    transition: all 0.5s ease;
-    padding: .5rem;
-    overflow: hidden;
-}
-
-.service:hover {
-    transform: scale(1.1);
-    transition: 0.4s;
-}
-
-.service img {
-    margin-top: 5vh;
-    width: 70%;
-    object-fit: cover;
-}
-
-.service h4 {
-    font-size: 1.5rem;
-}
-
-.service p {
-    text-align: center;
-    margin: 0 4vh 10vh;
-}
-
-
-/************  MÓVIL  ************/
-@media (max-width: 576px) {
-    .contenedorServicios {
-        padding: 1rem;
-    }
-
-    .servicesWrapper {
-        width: 100%;
-    }
-}
-
-
-/********************************* ABOUT ***********************************************/
-
-/* Contenedor principal */
-.section2 {
-    position: relative;
-    width: 100%;
-    padding: 8rem 20rem;
-    overflow: hidden; /* Evita desbordes */
-}
-
-/* Fondo fijo REAL (funciona en móvil y escritorio) */
-.section2::before {
-    content: "";
-    position: fixed;        /* LA CLAVE DEL PARALLAX REAL */
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-
-    background-image: url(../src/assets/img/atres.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    z-index: -2; /* Va detrás del contenido */
-}
-
-/* Capa de oscurecimiento suave opcional */
-.section2::after {
+/* Overlay de gradiente para mejorar legibilidad */
+.contenedorServicios::after {
     content: "";
     position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.2); 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.6) 0%,
+        rgba(0, 0, 0, 0.4) 50%,
+        rgba(0, 0, 0, 0.6) 100%
+    );
     z-index: -1;
 }
 
-/*********** Contenido interno ************/
-.parrafoSegundo {
+/* Contenedor principal de servicios */
+.services {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
     position: relative;
-    z-index: 1; /* Garantiza que quede por encima del fondo */
+    z-index: 1;
+}
+
+/* Título con efecto moderno */
+.services h1.tituloImagen {
+    text-align: center;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.tituloImagen img {
+    max-width: 450px;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.4));
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    z-index: 2;
+}
+
+.tituloImagen img:hover {
+    transform: translateY(-5px) scale(1.05);
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.5));
+}
+
+/* Efecto de brillo detrás del título */
+.tituloImagen::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(
+        circle,
+        rgba(247, 170, 170, 0.3) 0%,
+        rgba(247, 170, 170, 0.1) 50%,
+        transparent 70%
+    );
+    border-radius: 50%;
+    z-index: 1;
+    animation: pulseGlow 4s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+    0%, 100% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 0.5; transform: translate(-50%, -50%) scale(1.1); }
+}
+
+/* Contenedor de las cards - 3 EN UNA LÍNEA */
+.servicesWrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    width: 100%;
+    margin: 0 auto;
+    perspective: 1000px;
+}
+
+/* Cards de servicios - DISEÑO PROFESIONAL */
+.service {
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.12) 0%,
+        rgba(255, 255, 255, 0.08) 100%
+    );
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 28px;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.25),
+        0 10px 20px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transform-style: preserve-3d;
+    transform: translateZ(0);
+}
+
+/* Efecto de brillo interior */
+.service::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0.05) 50%,
+        transparent 100%
+    );
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    border-radius: 28px;
+}
+
+/* Contenedor de imagen con marco decorativo */
+.service .image-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 2rem;
+    z-index: 2;
+}
+
+.service img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.3),
+        0 10px 15px rgba(0, 0, 0, 0.2),
+        inset 0 0 20px rgba(255, 255, 255, 0.3);
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    z-index: 1;
+}
+
+/* Anillo decorativo alrededor de la imagen */
+.service .image-container::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    border-radius: 50%;
+    background: linear-gradient(
+        45deg,
+        rgba(247, 170, 170, 0.4),
+        rgba(255, 255, 255, 0.2),
+        rgba(247, 170, 170, 0.4)
+    );
+    z-index: 0;
+    animation: rotateRing 20s linear infinite;
+}
+
+@keyframes rotateRing {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Icono decorativo flotante */
+.service .service-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    transition: all 0.4s ease;
+}
+
+/* Título del servicio */
+.service h4 {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    position: relative;
+    padding-bottom: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+/* Línea decorativa bajo el título */
+.service h4::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent 0%,
+        rgba(247, 170, 170, 0.8) 50%,
+        transparent 100%
+    );
+    border-radius: 2px;
+    transition: all 0.4s ease;
+}
+
+/* Descripción */
+.service p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin: 0 0 2rem 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    flex-grow: 1;
+    padding: 0 1rem;
+}
+
+/* Botón elegante */
+.service .service-btn {
+    background: linear-gradient(135deg, 
+        rgba(247, 170, 170, 0.9) 0%,
+        rgba(247, 170, 170, 0.7) 100%
+    );
+    color: white;
+    border: none;
+    padding: 0.9rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 
+        0 6px 20px rgba(247, 170, 170, 0.3),
+        0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.service .service-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    transition: left 0.6s ease;
+}
+
+/* Efectos hover en toda la card */
+.service:hover {
+    transform: translateY(-15px) translateZ(20px);
+    border-color: rgba(247, 170, 170, 0.4);
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.35),
+        0 20px 40px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.18) 0%,
+        rgba(255, 255, 255, 0.12) 100%
+    );
+}
+
+.service:hover::before {
+    opacity: 1;
+}
+
+.service:hover img {
+    transform: scale(1.1) rotate(5deg);
+    border-color: rgba(255, 255, 255, 1);
+    box-shadow: 
+        0 20px 45px rgba(0, 0, 0, 0.4),
+        0 15px 25px rgba(0, 0, 0, 0.3),
+        inset 0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+.service:hover h4::after {
+    width: 100px;
+    background: linear-gradient(90deg, 
+        transparent 0%,
+        rgba(247, 170, 170, 1) 50%,
+        transparent 100%
+    );
+}
+
+.service:hover .service-icon {
+    transform: scale(1.2) rotate(15deg);
+    background: rgba(247, 170, 170, 0.9);
     color: white;
 }
 
-/*********** RESPONSIVE ************/
-@media (max-width: 768px) {
-    .section2 {
-        padding: 4rem 2rem;
+.service:hover .service-btn {
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.95) 0%,
+        rgba(247, 170, 170, 0.9) 100%
+    );
+    color: #333;
+    transform: translateY(-2px);
+    box-shadow: 
+        0 10px 25px rgba(247, 170, 170, 0.4),
+        0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.service:hover .service-btn::before {
+    left: 100%;
+}
+
+/* Efecto de partículas flotantes (opcional) */
+.service::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.1) 0%,
+        transparent 70%
+    );
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+}
+
+.service:hover::after {
+    opacity: 1;
+}
+
+/* Animaciones de entrada AOS mejoradas */
+.service[data-aos] {
+    opacity: 0;
+    transform: translateY(40px) scale(0.9);
+    transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.service[data-aos].aos-animate {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.subtitulo {
+  background: rgba(255, 255, 255, 0.55);
+  text-align: center;
+
+  max-width: 520px;
+  margin: 0 auto;
+  margin-bottom: 3rem;          /* centra el bloque */
+
+  padding: 0.75rem 1.25rem;
+  border-radius: 14px;
+
+  font-size: 0.95rem;
+  color: #000000;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/************  RESPONSIVE DESIGN  ************/
+
+/* Tablets y laptops pequeñas */
+@media (max-width: 1200px) {
+    .servicesWrapper {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+    
+    .service {
+        padding: 2rem 1.5rem;
+    }
+    
+    .service .image-container {
+        width: 180px;
+        height: 180px;
     }
 }
 
-@media (max-width: 576px) {
-    .section2 {
-        padding: 3rem 1rem;
+/* Tablets */
+@media (max-width: 992px) {
+    .contenedorServicios {
+        padding: 4rem 1rem;
+    }
+    
+    .services {
+        padding: 2rem 1.5rem;
+    }
+    
+    .servicesWrapper {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .tituloImagen img {
+        max-width: 380px;
+    }
+    
+    .tituloImagen::before {
+        width: 250px;
+        height: 250px;
     }
 }
+
+/* Tabletas pequeñas y móviles grandes */
+@media (max-width: 768px) {
+    .contenedorServicios {
+        padding: 3rem 1rem;
+    }
+    
+    .servicesWrapper {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        gap: 2.5rem;
+    }
+    
+    .service {
+        padding: 2.5rem 2rem;
+    }
+    
+    .service .image-container {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .tituloImagen img {
+        max-width: 320px;
+    }
+    
+    .tituloImagen::before {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Móviles */
+@media (max-width: 576px) {
+    .contenedorServicios {
+        padding: 2rem 1rem;
+        min-height: auto;
+    }
+    
+    .services {
+        padding: 1.5rem 1rem;
+    }
+    
+    .servicesWrapper {
+        gap: 2rem;
+    }
+    
+    .service {
+        padding: 2rem 1.5rem;
+        border-radius: 24px;
+    }
+    
+    .service .image-container {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .service img {
+        border-width: 4px;
+    }
+    
+    .service h4 {
+        font-size: 1.6rem;
+    }
+    
+    .service p {
+        font-size: 1rem;
+        line-height: 1.6;
+        padding: 0 0.5rem;
+    }
+    
+    .tituloImagen img {
+        max-width: 280px;
+    }
+    
+    .services h1.tituloImagen {
+        margin-bottom: 3.5rem;
+    }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 400px) {
+    .contenedorServicios {
+        padding: 2rem 0.75rem;
+    }
+    
+    .service {
+        padding: 1.8rem 1.2rem;
+        border-radius: 20px;
+    }
+    
+    .service .image-container {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .service h4 {
+        font-size: 1.4rem;
+    }
+    
+    .service p {
+        font-size: 0.95rem;
+    }
+    
+    .service .service-btn {
+        padding: 0.8rem 2rem;
+        font-size: 0.9rem;
+    }
+    
+    .tituloImagen img {
+        max-width: 250px;
+    }
+}
+
+/* Pantallas extra grandes */
+@media (min-width: 1600px) {
+    .servicesWrapper {
+        gap: 4rem;
+    }
+    
+    .service {
+        padding: 3.5rem 2.5rem;
+    }
+    
+    .service .image-container {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .service h4 {
+        font-size: 2rem;
+    }
+    
+    .service p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+}
+
   
 
 /************************************** Footer *********************************/
 .footer {
     display: flex;
-    flex-direction: column;
     width: 100%;
     background-color: #ddd;
 }
 
 .contacto {
     margin-top: 30px;
-    margin-left: 5%;
 }
 
 .footerUno {
@@ -575,10 +837,10 @@ html, body {
 
 .footerDos {
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
-    gap: 20vh;
     margin-top: 20px;
-    margin-left: 4%;
+    margin-left: 14%;
 }
 
 .dateFooter {
@@ -633,7 +895,7 @@ html, body {
 
     .contenedorUno,
     .contenedorServicios {
-        padding: 3rem 5rem;
+        padding: 1rem 1rem;
     }
 
     .section2 {
@@ -667,7 +929,7 @@ html, body {
 
     .contenedorUno,
     .contenedorServicios {
-        padding: 2rem 3rem;
+        padding: 1rem 1rem;
     }
 
     .section2 {
@@ -686,7 +948,7 @@ html, body {
 @media (max-width: 800px) {
     .contenedorUno {
         flex-direction: column;
-        padding: 1rem 2rem;
+        padding: 1rem 1rem;
     }
 
     .contenedorUno .contenido-interno {
@@ -719,7 +981,7 @@ html, body {
     }
 
     .contenedorServicios {
-        padding: 1rem 2rem;
+        padding: 1rem 1rem;
         /* Reducido para móvil */
     }
 
@@ -900,7 +1162,7 @@ html, body {
 
 /* Carrusel: encima del contenido base, pero debajo de decoraciones */
 .customCarousel {
-  width: 70%;
+  width: 40%;
   max-width: 950px;
   margin: 40px auto;
   border-radius: 20px;
@@ -982,4 +1244,439 @@ html, body {
   transition: 0.3s ease-in-out;
 }
 
+
+/*************************** GALERIA CARRUSEL (PARALLAX REAL) ******************/
+
+.galeria {
+    position: relative;
+    width: 100%;
+    padding: 4rem 0;
+    overflow: hidden; /* evita problemas con el fondo fijo */
+}
+
+/* Fondo parallax REAL, compatible en móvil */
+.galeria::before {
+    content: "";
+    position: fixed; /* CLAVE DEL EFECTO */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url(../src/assets/img/halloween/halloweenTwo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: -2;
+}
+
+/********************* CONTENIDO INTERNO *********************/
+
+.tituloImagen {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60%;
+    z-index: 1;
+    position: relative;
+}
+
+/* Carrusel  */
+.carousel-item img {
+    width: 40%;
+    height: 100%;
+    object-fit: contain;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(255, 100, 100, 0.6);
+    border-radius: 50%;
+    background-size: 50% 50%;
+    padding: 25px;
+    z-index: 1;
+}
+
+/* Botón */
+.divCuadro {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+}
+
+.cuadroGallery {
+    background-color: rgba(255, 255, 255, 0.911);
+    padding: 1rem 2rem;
+    border: 3px solid black;
+    margin-bottom: 2rem;
+    margin-top: 20px;
+    transition: all 0.5s ease;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/********************* RESPONSIVE *********************/
+
+@media (max-width: 768px) {
+    .tituloImagen {
+        max-width: 80%;
+    }
+    .carousel-item img {
+        width: 70%;
+    }
+}
+
+@media (max-width: 576px) {
+    .tituloImagen {
+        max-width: 90%;
+    }
+    .carousel-item img {
+        width: 85%;
+    }
+}
+
+/************************************************GALERY*************************************/
+
+/* Contenedor principal (mantiene fondo) */
+.contenedorDos {
+  position: relative;
+  width: 100%;
+  padding: 50px 20px;
+  overflow: hidden;
+}
+
+.contenedorDos-bg {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+/* MARCO DE LA GALERÍA */
+.gallery-frame {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 40px auto;
+  background: rgb(255 255 255 / 60%);
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    inset 0 0 0 4px rgba(255, 255, 255, 0.8),
+    inset 0 0 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 5;
+  min-height: 550px;
+}
+
+/* Panel izquierdo: Descripción */
+.description-panel {
+  flex: 1;
+  min-width: 300px;
+  padding: 40px 30px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8)rgba(245, 245, 245, 0.95) 100%);
+  border-right: 3px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.description-content {
+  max-width: 500px;
+  text-align: center;
+}
+
+.category-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.category-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--primario), transparent);
+}
+
+.category-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 30px;
+  text-align: justify;
+  padding: 0 20px;
+}
+
+.category-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.feature-tag {
+  background: rgba(var(--primario-rgb, 220, 180, 220), 0.2);
+  border: 2px solid var(--primario);
+  border-radius: 50px;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.feature-tag:hover {
+  background: var(--primario);
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Panel derecho: Carrusel */
+.carousel-panel {
+  flex: 1.2;
+  min-width: 380px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.02);
+}
+
+/* Modificaciones al carrusel dentro del marco */
+.gallery-frame .customCarousel {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.2),
+    inset 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+/* Nav Category mejorado */
+.navCategory {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 10;
+}
+
+.btn-light {
+  border: 3px solid black;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 12px 25px;
+  min-width: 140px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.navCategory .btn-light.active {
+  background-color: var(--primario) !important;
+  border-color: #000000 !important;
+  color: #000000 !important;
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.navCategory .btn-light:hover:not(.active) {
+  background-color: var(--primario);
+  border-color: #000000;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Ajustes para decoraciones Halloween dentro del marco */
+.gallery-frame .ghost-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 30;
+}
+
+.gallery-frame .web-left,
+.gallery-frame .web-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 120px;
+  height: 120px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.5));
+}
+
+.gallery-frame .web-left {
+  left: -50px;
+}
+
+.gallery-frame .web-right {
+  right: -50px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .gallery-frame {
+    flex-direction: column;
+    max-width: 700px;
+    margin: 30px auto;
+  }
+  
+  .description-panel {
+    border-right: none;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+  }
+  
+  .carousel-panel {
+    padding: 20px;
+  }
+  
+  .category-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-frame {
+    margin: 20px auto;
+    border-radius: 20px;
+  }
+  
+  .navCategory {
+    gap: 10px;
+  }
+  
+  .btn-light {
+    padding: 10px 15px;
+    min-width: 120px;
+    font-size: 0.9rem;
+  }
+  
+  .category-title {
+    font-size: 1.8rem;
+  }
+  
+  .category-description {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+  
+  .gallery-frame .web-left,
+  .gallery-frame .web-right {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .gallery-frame .web-left {
+    left: -30px;
+  }
+  
+  .gallery-frame .web-right {
+    right: -30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-frame {
+    border-radius: 15px;
+    margin: 15px auto;
+  }
+  
+  .description-panel,
+  .carousel-panel {
+    padding: 20px 15px;
+  }
+  
+  .category-title {
+    font-size: 1.5rem;
+  }
+  
+  .feature-tag {
+    font-size: 0.8rem;
+    padding: 6px 15px;
+  }
+  
+  .navCategory {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-light {
+    width: 200px;
+  }
+  
+  .gallery-frame .web-left,
+  .gallery-frame .web-right {
+    display: none;
+  }
+}
+
+/* Mantén tus otros estilos existentes sin cambios */
+.sectionGallery {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.customCarousel {
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden !important;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 10;
+}
+
+.carouselImg {
+  height: 500px;
+  object-fit: cover;
+  display: block;
+  width: 100%;
+}
+
+/* Asegúrate de definir la variable --primario en tu CSS global */
+:root {
+  --primario: #d8b4d8; /* Color lavanda - ajusta según tu diseño */
+  --primario-rgb: 216, 180, 216; /* Para usar con rgba */
+}
 

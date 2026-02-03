@@ -100,7 +100,7 @@ export const logout = () => {
 
 export const updateProfile = async (id, userData, token) => {
   try {
-    const response = await fetch(`https://api-mongo-06nz.onrender.com/api/usuarios/${id}`, {
+    const response = await fetch(`${API_URL}/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -125,7 +125,7 @@ export const updateProfile = async (id, userData, token) => {
 export const cambiarPassword = async (id, data, token) => {
   try {
     const response = await fetch(
-      `https://api-mongo-06nz.onrender.com/api/usuarios/cambiar-password/${id}`,
+      `${API_URL}/cambiar-password/${id}`,
       {
         method: "PUT",
         headers: {

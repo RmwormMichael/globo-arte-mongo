@@ -5,6 +5,11 @@ import 'hover.css/css/hover-min.css';
 
 const AdminUsers = () => {
   const [users, setUsers] = useState([]);
+
+  const API_URL = 'https://api-mongo-06nz.onrender.com'
+
+
+  
   const [filteredUsers, setFilteredUsers] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [editingUser, setEditingUser] = useState(null);
@@ -22,7 +27,7 @@ const AdminUsers = () => {
   const loadUsers = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch("https://api-mongo-06nz.onrender.com/api/usuarios/", {
+      const response = await fetch(`${API_URL}/api/usuarios/`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -90,7 +95,7 @@ const AdminUsers = () => {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`https://api-mongo-06nz.onrender.com/api/usuarios/${editingUser.id_user}`, {
+      const response = await fetch(`${API_URL}/api/usuarios/${editingUser.id_user}`, {
         method: "PUT",
         headers: { 
           "Content-Type": "application/json",
@@ -139,7 +144,7 @@ const AdminUsers = () => {
     if (result.isConfirmed) {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch(`https://api-mongo-06nz.onrender.com/api/usuarios/${id}`, {
+        const response = await fetch(`${API_URL}/api/usuarios/${id}`, {
           method: "DELETE",
           headers: { 
             "Content-Type": "application/json",
