@@ -899,7 +899,7 @@ html, body {
     }
 
     .section2 {
-        padding: 6rem 10rem;
+        padding: 4rem 10rem;
     }
 
     .grid {
@@ -933,7 +933,7 @@ html, body {
     }
 
     .section2 {
-        padding: 4rem 6rem;
+        padding: 2rem 6rem;
     }
 
     .grid {
@@ -994,7 +994,7 @@ html, body {
     }
 
     .section2 {
-        padding: 2rem 3rem;
+        padding: 0rem 3rem;
         /* Reducido para móvil */
     }
 
@@ -1069,7 +1069,7 @@ html, body {
     }
 
     .section2 {
-        padding: 1.5rem;
+        padding: 0.5rem;
     }
 
     .grid {
@@ -1341,13 +1341,7 @@ html, body {
     }
 }
 
-@media (max-width:415px) {
-    .gallery-frame .customCarousel{
-        width: 76%!important;
-    }
 
-
-}
 
 /************************************************GALERY*************************************/
 
@@ -1467,7 +1461,6 @@ html, body {
 /* Panel derecho: Carrusel */
 .carousel-panel {
   flex: 1.2;
-  min-width: 380px;
   padding: 30px;
   display: flex;
   align-items: center;
