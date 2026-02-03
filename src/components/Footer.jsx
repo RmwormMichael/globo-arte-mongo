@@ -1,7 +1,7 @@
 import "../App.css";
-import facebook from "../assets/img/facebook.svg";
-import whatsapp from "../assets/img/whatsapp.svg";
-import instagram from "../assets/img/instagram.svg";
+import facebook from "../../public/img/facebook.svg";
+import whatsapp from "../../public/img/whatsapp.svg";
+import instagram from "../../public/img/instagram.svg";
 
 export default function Footer() {
   return (

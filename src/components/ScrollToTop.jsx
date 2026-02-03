@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import '../App.css';
-import botonSubirImg from '../assets/img/botonSubir.png';
+import botonSubirImg from '../../public/img/botonSubir.png';
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);

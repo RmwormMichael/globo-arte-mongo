@@ -6,26 +6,26 @@ import Snowfall from "../assets/snowfall/Snowfall";
 import "../assets/snowfall/snowfall.css";
 
 // Importar las imágenes de fondo
-import fondoArcos from "../assets/img/fondo-bouquets.jpg";
-import fondoBouquets from "../assets/img/fondoUno.jpg";
-import fondoDisenos from "../assets/img/halloween/halloweenTwo.jpg";
-import fondoNavidad from "../assets/img/navidad.jpg";
+import fondoArcos from "../../public/img/fondo-bouquets.jpg";
+import fondoBouquets from "../../public/img/fondoUno.jpg";
+import fondoDisenos from "../../public/img/halloween/halloweenTwo.jpg";
+import fondoNavidad from "../../public/img/navidad.jpg";
 
 // Datos de las imágenes centralizado
 const categoriesData = {
   arcos: {
     background: fondoArcos,
     images: [
-      { src: "/src/assets/img/arcos/1.jpg", alt: "Arco decorativo 1" },
-      { src: "/src/assets/img/arcos/2.jpg", alt: "Arco decorativo 2" },
-      { src: "/src/assets/img/arcos/3.jpg", alt: "Arco decorativo 3" },
-      { src: "/src/assets/img/arcos/4.jpg", alt: "Arco decorativo 4" },
-      { src: "/src/assets/img/arcos/5.jpg", alt: "Arco decorativo 5" },
-      { src: "/src/assets/img/arcos/6.jpg", alt: "Arco decorativo 6" },
-      { src: "/src/assets/img/arcos/7.jpg", alt: "Arco decorativo 7" },
-      { src: "/src/assets/img/arcos/8.jpg", alt: "Arco decorativo 8" },
-      { src: "/src/assets/img/arcos/9.jpg", alt: "Arco decorativo 9" },
-      { src: "/src/assets/img/arcos/10.jpg", alt: "Arco decorativo 10" },
+      { src: "../../public/img/arcos/1.jpg", alt: "Arco decorativo 1" },
+      { src: "../../public/img/arcos/2.jpg", alt: "Arco decorativo 2" },
+      { src: "../../public/img/arcos/3.jpg", alt: "Arco decorativo 3" },
+      { src: "../../public/img/arcos/4.jpg", alt: "Arco decorativo 4" },
+      { src: "../../public/img/arcos/5.jpg", alt: "Arco decorativo 5" },
+      { src: "/../../public/img/arcos/.jpg", alt: "Arco decorativo 6" },
+      { src: "../../public/img/arcos/7.jpg", alt: "Arco decorativo 7" },
+      { src: "../../public/img/arcos/8.jpg", alt: "Arco decorativo 8" },
+      { src: "../../public/img/arcos/9.jpg", alt: "Arco decorativo 9" },
+      { src: "../../public/img/arcos/10.jpg", alt: "Arco decorativo 10" },
     ],
     description: "Arcos decorativos elegantes para bodas, eventos y celebraciones especiales. Diseños personalizados con flores frescas y artificiales que crean un ambiente mágico."
   },

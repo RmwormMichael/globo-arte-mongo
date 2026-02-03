@@ -1,12 +1,12 @@
 import React from "react";
 import nuestrosServicios from "../assets/logo/nuestrosServicios.png";
-import globoArco from "../assets/img/1.jpg";
-import bouquets from "../assets/img/2.jpg";
-import disenosEspeciales from "../assets/img/11.jpg";
+import globoArco from "../../public/img/1.jpg";
+import bouquets from "../../public/img/2.jpg";
+import disenosEspeciales from "../../public/img/11.jpg";
 
 export default function ServicesSection() {
   return (
-    <div className="contenedorServicios" id="services">
+    <div className="contenedorSe../../public/img/s">
       <div className="services">
         <h1 className="tituloImagen">
           <img

@@ -3,13 +3,13 @@ import '../assets/css/seccionUno.css'
 
 // Importa tus imágenes - reemplaza estos ejemplos con tus propias imágenes
 // Si no tienes imágenes locales, puedes usar estas de ejemplo o reemplazar con tus propias
-import img1 from "../assets/img/arcos/1.jpg"; // Reemplaza con tu imagen 1
-import img2 from "../assets/img/arcos/2.jpg"; // Reemplaza con tu imagen 2
-import img3 from "../assets/img/arcos/3.jpg"; // Reemplaza con tu imagen 3
-import img4 from "../assets/img/arcos/4.jpg"; // Reemplaza con tu imagen 4
-import img5 from "../assets/img/arcos/5.jpg"; // Reemplaza con tu imagen 5
-import img6 from "../assets/img/arcos/6.jpg"; // Reemplaza con tu imagen 6
-import img7 from "../assets/img/arcos/7.jpg"; // Reemplaza con tu imagen 7
+import img1 from "../../public/img/arcos/1.jpg"; // Reemplaza con tu imagen 1
+import img2 from "../../public/img/arcos/2.jpg"; // Reemplaza con tu imagen 2
+import img3 from "../../public/img/arcos/3.jpg"; // Reemplaza con tu imagen 3
+import img4 from "../../public/img/arcos/4.jpg"; // Reemplaza con tu imagen 4
+import img5 from "../../public/img/arcos/5.jpg"; // Reemplaza con tu imagen 5
+import img6 from "../../public/img/arcos/6.jpg"; // Reemplaza con tu imagen 6
+import img7 from "../../public/img/arcos/7.jpg"; // Reemplaza con tu imagen 7
 
 export default function SeccionUno() {
   const [currentSlide, setCurrentSlide] = useState(1);
