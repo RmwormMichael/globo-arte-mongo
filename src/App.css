@@ -1341,6 +1341,14 @@ html, body {
     }
 }
 
+@media (max-width:415px) {
+    .gallery-frame .customCarousel{
+        width: 76%!important;
+    }
+
+
+}
+
 /************************************************GALERY*************************************/
 
 /* Contenedor principal (mantiene fondo) */
