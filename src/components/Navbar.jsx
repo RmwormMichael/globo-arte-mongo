@@ -277,7 +277,7 @@ export default function Navbar({ onOpenLogin, onOpenRegister, onLogout }) {
                 </>
               ) : (
                 <>
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     <button
                       className="nav-link btn btn-link"
                       onClick={handleLogin}
@@ -292,7 +292,7 @@ export default function Navbar({ onOpenLogin, onOpenRegister, onLogout }) {
                     >
                       Register
                     </button>
-                  </li>
+                  </li> */}
                 </>
               )}
             </ul>
