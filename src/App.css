@@ -237,7 +237,7 @@ html, body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url(../src/assets/img/fondoUno.jpg);
+    background-image: url(/img/fondoUno.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1263,7 +1263,7 @@ html, body {
     width: 100vw;
     height: 100vh;
 
-    background-image: url(../src/assets/img/halloween/halloweenTwo.jpg);
+    background-image: url(/img/halloween/halloweenTwo.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
