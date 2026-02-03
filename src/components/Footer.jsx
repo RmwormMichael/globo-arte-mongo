@@ -5,17 +5,23 @@ import instagram from "/img/instagram.svg";
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className="footer-wrapper">
       <div className="footer">
+
+        {/* Columna izquierda */}
         <div className="footerUno">
           <h5 className="contacto">Contáctanos</h5>
-          <p className="dateFooter">Celular: (+57) 314 211 99 46</p>
-          <p className="dateFooter">Bogotá, Colombia</p>
+          <p className="dateFooter">📞 (+57) 314 211 99 46</p>
+          <p className="dateFooter">📍 Bogotá, Colombia</p>
         </div>
-        <div className="footerDos">
-          <p>Siguenos en nuestras redes sociales:</p>
 
-          <div>
+        {/* Columna derecha */}
+        <div className="footerDos">
+          <p className="footerRedesTexto">
+            Síguenos en nuestras redes
+          </p>
+
+          <div className="footerRedes">
             <a
               href="https://www.facebook.com/share/1DfwVBr9ZL/"
               target="_blank"
@@ -27,6 +33,7 @@ export default function Footer() {
                 alt="Facebook"
               />
             </a>
+
             <a
               href="https://wa.me/3142119946"
               target="_blank"
@@ -38,8 +45,9 @@ export default function Footer() {
                 alt="WhatsApp"
               />
             </a>
+
             <a
-              href="https://www.instagram.com/globo_arte_marthaperez?igsh=d3YycG52cDFyNWNw"
+              href="https://www.instagram.com/globo_arte_marthaperez"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -51,6 +59,12 @@ export default function Footer() {
             </a>
           </div>
         </div>
+
+      </div>
+
+      {/* Línea inferior */}
+      <div className="footerCopy">
+        © {new Date().getFullYear()} Globo Arte · Todos los derechos reservados
       </div>
     </footer>
   );

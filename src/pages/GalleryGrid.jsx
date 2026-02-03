@@ -6,16 +6,15 @@ export default function GalleryGrid({ images, category }) {
 
   return (
     <section className="sectionGallery">
-
       {/* DECORACIONES SOLO EN HALLOWEEN (posición absoluta, encima del carrusel) */}
-    {isHalloween && (
-      <div className="ghost-layer">
-        <div className="web-left" aria-hidden="true"></div>
-        <div className="web-right" aria-hidden="true"></div>
-      </div>
-    )}
+      {isHalloween && (
+        <div className="ghost-layer">
+          <div className="web-left" aria-hidden="true"></div>
+          <div className="web-right" aria-hidden="true"></div>
+        </div>
+      )}
 
-      {/* CARRUSEL BOOTSTRAP */}
+      {/* CARRUSEL */}
       <div
         id={`carousel-${category}`}
         className="carousel slide carousel-fade customCarousel"
@@ -23,7 +22,6 @@ export default function GalleryGrid({ images, category }) {
       >
         <div className="carousel-inner">
           {images.map((image, index) => {
-            // construimos la imagen (si es halloween, la animamos internamente)
             const imgElement = (
               <img
                 src={image.src}
@@ -44,38 +42,30 @@ export default function GalleryGrid({ images, category }) {
                 key={index}
               >
                 {content}
-
-                {/* Texto opcional si en el futuro le agregas name o price */}
-                {(image.name || image.price) && (
-                  <div className="carousel-caption d-none d-md-block">
-                    {image.name && <h5>{image.name}</h5>}
-                    {image.price && <p>{image.price}</p>}
-                  </div>
-                )}
               </div>
             );
           })}
         </div>
+      </div>
 
-        {/* CONTROLES */}
+      {/* CONTROLES DEBAJO */}
+      <div className="carousel-controls-bottom">
         <button
-          className="carousel-control-prev"
+          className="carousel-btn"
           type="button"
           data-bs-target={`#carousel-${category}`}
           data-bs-slide="prev"
         >
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Anterior</span>
+          ‹ Anterior
         </button>
 
         <button
-          className="carousel-control-next"
+          className="carousel-btn"
           type="button"
           data-bs-target={`#carousel-${category}`}
           data-bs-slide="next"
         >
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Siguiente</span>
+          Siguiente ›
         </button>
       </div>
     </section>
